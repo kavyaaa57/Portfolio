@@ -20,7 +20,7 @@ const Hero = () => {
               <span className="gradient-text">Kavyavarshini K</span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-medium text-muted-foreground">
-              MERN Full Stack Developer
+              Full Stack Developer
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Enthusiastic engineering student with expertise in full-stack development, 
@@ -37,14 +37,19 @@ const Hero = () => {
               <Mail className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
               Get In Touch
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-primary/30 hover:border-primary text-foreground hover:bg-primary/10 group"
-            >
-              <Download className="mr-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
-              Download Resume
-            </Button>
+            <a
+  href="https://drive.google.com/file/d/1UhXIr6Ejn2JJNbpHp4n4106p0SEQAr_U/view?usp=drive_link"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    size="lg"
+    className="bg-gradient-to-r from-primary to-secondary text-white font-semibold px-6 py-3 rounded-xl shadow-lg flex items-center gap-2 hover:scale-105 hover:shadow-xl transition-all duration-300 group"
+  >
+    <Download className="h-6 w-6 group-hover:scale-110 transition-transform" />
+    Download Resume
+  </Button>
+</a>
           </div>
 
           {/* Social Links */}
