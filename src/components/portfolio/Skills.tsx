@@ -47,7 +47,7 @@ const Skills = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16 fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
             Technical <span className="gradient-text">Skills</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -57,15 +57,15 @@ const Skills = () => {
 
         {/* Programming Languages */}
         <div className="mb-16 fade-in-up" style={{ animationDelay: '0.2s' }}>
-          <h3 className="text-2xl font-semibold mb-6 text-center">Programming Languages</h3>
+          <h3 className="text-2xl font-heading font-semibold mb-6 text-center">Programming Languages</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {programmingLanguages.map((lang, index) => (
               <div
                 key={lang}
-                className="px-6 py-3 bg-card/50 backdrop-blur-sm border border-primary/20 rounded-full hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 hover:scale-105"
+                className="px-8 py-4 artistic-card backdrop-blur-sm border border-primary/20 rounded-full hover:border-primary/50 hover:bg-primary/10 transition-all duration-500 hover:scale-110 glow-hover"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <span className="font-medium">{lang}</span>
+                <span className="font-medium text-lg">{lang}</span>
               </div>
             ))}
           </div>
@@ -79,16 +79,16 @@ const Skills = () => {
               className="group relative overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="glass-card p-8 rounded-2xl h-full hover:bg-card-hover transition-all duration-300 border hover:border-primary/30 fade-in-up">
+              <div className="artistic-card p-8 rounded-2xl h-full transition-all duration-500 border fade-in-up">
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className={`inline-flex p-4 rounded-xl bg-${category.color}/10 border border-${category.color}/20`}>
-                    <category.icon className={`h-8 w-8 text-${category.color}`} />
+                  <div className="inline-flex p-4 rounded-xl bg-primary/10 border border-primary/20">
+                    <category.icon className="h-8 w-8 text-primary" />
                   </div>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-heading font-semibold mb-4 group-hover:text-primary transition-colors">
                   {category.title}
                 </h3>
 
@@ -99,7 +99,7 @@ const Skills = () => {
                       key={skill}
                       className="flex items-center space-x-3 group/skill"
                     >
-                      <div className={`w-2 h-2 rounded-full bg-${category.color}/60 group-hover/skill:bg-${category.color} transition-colors`}></div>
+                      <div className="w-2 h-2 rounded-full bg-primary/60 group-hover/skill:bg-primary transition-colors"></div>
                       <span className="text-muted-foreground group-hover/skill:text-foreground transition-colors">
                         {skill}
                       </span>
@@ -108,7 +108,7 @@ const Skills = () => {
                 </div>
 
                 {/* Hover Effect */}
-                <div className={`absolute inset-0 bg-gradient-to-br from-${category.color}/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl`}></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
               </div>
             </div>
           ))}
@@ -116,8 +116,8 @@ const Skills = () => {
 
         {/* Soft Skills */}
         <div className="mt-16 text-center fade-in-up" style={{ animationDelay: '0.6s' }}>
-          <h3 className="text-2xl font-semibold mb-6">Soft Skills</h3>
-          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+          <h3 className="text-2xl font-heading font-semibold mb-6">Soft Skills</h3>
+          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
             {[
               "Analytical Thinking", "Problem-Solving", "Team Collaboration", 
               "Effective Communication", "Quick Learner", "Self-Motivation",
@@ -125,7 +125,7 @@ const Skills = () => {
             ].map((skill, index) => (
               <span
                 key={skill}
-                className="px-4 py-2 bg-muted/50 rounded-full text-sm hover:bg-muted transition-colors duration-200"
+                className="px-6 py-3 artistic-card text-sm hover:scale-105 glow-hover transition-all duration-300"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 {skill}

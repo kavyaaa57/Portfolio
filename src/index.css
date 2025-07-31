@@ -1,73 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Portfolio Design System - Modern Tech Aesthetic */
+/* Artistic Portfolio Design System - Inspired by Yelenn */
 
 @layer base {
   :root {
-    /* Modern Light Theme Colors */
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Artistic Light Theme - Warm & Elegant */
+    --background: 25 55% 97%;
+    --foreground: 25 15% 15%;
 
-    /* Card System */
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --card-hover: 240 4.8% 95.9%;
+    /* Card System with Warmth */
+    --card: 25 55% 98%;
+    --card-foreground: 25 15% 15%;
+    --card-hover: 25 45% 96%;
 
     /* Interactive Elements */
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 25 55% 98%;
+    --popover-foreground: 25 15% 15%;
 
-    /* Brand Colors - Modern Vibrant */
-    --primary: 262.1 83.3% 57.8%;
-    --primary-foreground: 210 40% 98%;
-    --primary-glow: 262.1 83.3% 77.8%;
+    /* Artistic Brand Colors - Coral & Lavender Palette */
+    --primary: 14 85% 65%;        /* Coral */
+    --primary-foreground: 25 55% 98%;
+    --primary-glow: 14 85% 75%;
 
-    --secondary: 210 40% 98%;
-    --secondary-foreground: 222.2 84% 4.9%;
-    --secondary-glow: 220 14.3% 95.9%;
+    --secondary: 270 60% 70%;     /* Lavender */
+    --secondary-foreground: 25 55% 98%;
+    --secondary-glow: 270 60% 80%;
+
+    --accent: 170 50% 65%;        /* Mint */
+    --accent-foreground: 25 55% 98%;
+
+    --gold: 45 95% 65%;           /* Gold */
+    --gold-foreground: 25 15% 15%;
 
     /* Supporting Colors */
-    --muted: 210 40% 98%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 25 35% 92%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 210 40% 98%;
-    --accent-foreground: 222.2 84% 4.9%;
+    --success: 142 70% 60%;
+    --success-foreground: 25 55% 98%;
 
-    --success: 142 76% 36%;
-    --success-foreground: 210 40% 98%;
+    --warning: 38 90% 65%;
+    --warning-foreground: 25 15% 15%;
 
-    --warning: 38 92% 50%;
-    --warning-foreground: 222.2 84% 4.9%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 25 55% 98%;
 
     /* UI Elements */
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 262.1 83.3% 57.8%;
+    --border: 25 25% 88%;
+    --input: 25 25% 88%;
+    --ring: 14 85% 65%;
 
-    /* Modern Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(262.1 83.3% 57.8%), hsl(221.2 83.2% 53.3%));
-    --gradient-hero: linear-gradient(135deg, hsl(262.1 83.3% 57.8%), hsl(221.2 83.2% 53.3%), hsl(142 76% 36%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 98%));
-    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(262.1 83.3% 57.8% / 0.15), transparent 70%);
-    --gradient-mesh: radial-gradient(at 40% 20%, hsl(262.1 83.3% 57.8% / 0.3) 0px, transparent 50%), 
-                     radial-gradient(at 80% 0%, hsl(221.2 83.2% 53.3% / 0.3) 0px, transparent 50%),
-                     radial-gradient(at 0% 50%, hsl(142 76% 36% / 0.3) 0px, transparent 50%);
+    /* Artistic Gradients - Inspired by Yelenn */
+    --gradient-primary: linear-gradient(135deg, hsl(14 85% 65%), hsl(270 60% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(14 85% 65%) 0%, hsl(270 60% 70%) 50%, hsl(170 50% 65%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(45 95% 65%) 0%, hsl(14 85% 65%) 100%);
+    --gradient-cool: linear-gradient(135deg, hsl(270 60% 70%) 0%, hsl(170 50% 65%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(25 55% 98%), hsl(25 45% 96%));
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(14 85% 65% / 0.15), transparent 70%);
+    
+    /* Artistic Background Mesh */
+    --gradient-mesh: 
+      radial-gradient(circle at 20% 30%, hsl(14 85% 65% / 0.2) 0%, transparent 60%),
+      radial-gradient(circle at 80% 70%, hsl(270 60% 70% / 0.2) 0%, transparent 60%),
+      radial-gradient(circle at 60% 20%, hsl(170 50% 65% / 0.15) 0%, transparent 60%),
+      radial-gradient(circle at 30% 80%, hsl(45 95% 65% / 0.1) 0%, transparent 60%);
 
-    /* Modern Shadows */
-    --shadow-glow: 0 10px 40px hsl(262.1 83.3% 57.8% / 0.15);
-    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
-    --shadow-elegant: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 8px 10px -6px hsl(0 0% 0% / 0.1);
+    /* Noise Texture Background */
+    --noise-texture: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
 
-    /* Smooth Animations */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Elegant Shadows */
+    --shadow-glow: 0 10px 40px hsl(14 85% 65% / 0.25);
+    --shadow-card: 0 4px 20px hsl(25 15% 15% / 0.08);
+    --shadow-elegant: 0 25px 50px hsl(25 15% 15% / 0.15);
+    --shadow-soft: 0 2px 10px hsl(25 15% 15% / 0.05);
+
+    /* Smooth Artistic Animations */
+    --transition-smooth: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-elastic: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     --radius: 1rem;
 
@@ -133,40 +145,62 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background: 
-      radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, rgba(120, 219, 226, 0.1) 0%, transparent 50%),
-      linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      var(--noise-texture),
+      var(--gradient-mesh),
+      linear-gradient(135deg, hsl(var(--background)) 0%, hsl(25 45% 96%) 100%);
     background-attachment: fixed;
     min-height: 100vh;
     cursor: none;
+    overflow-x: hidden;
   }
 
   html {
     scroll-behavior: smooth;
   }
 
-  /* Magnetic Cursor */
+  /* Advanced Magnetic Cursor */
   .magnetic-cursor {
     position: fixed;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
-    background: hsl(var(--primary));
-    border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
     mix-blend-mode: difference;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .magnetic-cursor.hover {
+  .cursor-outer {
+    width: 40px;
+    height: 40px;
+    border: 2px solid hsl(var(--primary));
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    transition: all 0.15s ease-out;
+  }
+
+  .cursor-inner {
+    width: 6px;
+    height: 6px;
+    background: hsl(var(--primary));
+    border-radius: 50%;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    transition: all 0.1s ease-out;
+  }
+
+  .cursor-outer.hover {
+    transform: scale(1.5);
+    border-color: hsl(var(--secondary));
+  }
+
+  .cursor-inner.hover {
     transform: scale(2);
-    background: hsl(var(--primary) / 0.8);
+    background: hsl(var(--secondary));
   }
 }
 
@@ -192,10 +226,10 @@
   }
 
   .glass-card {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: var(--shadow-soft);
   }
 
   .modern-card {
@@ -206,39 +240,53 @@
   }
 
   .modern-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-8px) scale(1.02);
     box-shadow: var(--shadow-elegant);
-    border-color: hsl(var(--primary) / 0.3);
+    border-color: hsl(var(--primary) / 0.4);
+  }
+
+  .artistic-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-elastic);
+  }
+
+  .artistic-card:hover {
+    transform: translateY(-12px) rotateX(5deg);
+    box-shadow: var(--shadow-elegant);
+    border-color: hsl(var(--primary) / 0.5);
   }
 
   .floating-animation {
-    animation: float 6s ease-in-out infinite;
+    animation: float 8s ease-in-out infinite;
   }
 
   .fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
 
   .fade-in-left {
-    animation: fadeInLeft 0.8s ease-out forwards;
+    animation: fadeInLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-40px);
   }
 
   .fade-in-right {
-    animation: fadeInRight 0.8s ease-out forwards;
+    animation: fadeInRight 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(40px);
   }
 
   .scale-hover {
-    transition: var(--transition-smooth);
+    transition: var(--transition-elastic);
   }
 
   .scale-hover:hover {
-    transform: scale(1.05);
+    transform: scale(1.08) translateY(-4px);
   }
 
   .glow-hover {
@@ -247,16 +295,25 @@
 
   .glow-hover:hover {
     box-shadow: var(--shadow-glow);
+    filter: brightness(1.05);
+  }
+
+  .parallax-element {
+    will-change: transform;
+    transition: transform 0.1s ease-out;
   }
 }
 
 /* Keyframe Animations */
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(0deg);
   }
-  50% {
-    transform: translateY(-20px);
+  33% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(-25px) rotate(-2deg);
   }
 }
 

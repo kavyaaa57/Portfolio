@@ -65,7 +65,7 @@ const Navigation = () => {
                   e.preventDefault();
                   handleNavClick('#home');
                 }}
-                className="text-xl font-bold gradient-text hover:scale-105 transition-transform"
+                className="text-xl font-heading font-semibold gradient-text hover:scale-105 transition-transform"
               >
                 Kavyavarshini K
               </a>
@@ -95,15 +95,21 @@ const Navigation = () => {
               ))}
             </div>
 
-            {/* CTA Button */}
+            {/* Resume Download */}
             <div className="hidden md:block">
               <Button 
                 variant="outline" 
                 size="sm"
-                className="border-primary/30 hover:border-primary hover:bg-primary/10"
-                onClick={() => handleNavClick('#contact')}
+                className="border-primary/30 hover:border-primary hover:bg-primary/10 font-medium"
+                asChild
               >
-                Let's Talk
+                <a 
+                  href="https://drive.google.com/file/d/1UhXIr6Ejn2JJNbpHp4n4106p0SEQAr_U/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Resume
+                </a>
               </Button>
             </div>
 
@@ -149,9 +155,15 @@ const Navigation = () => {
                     variant="outline" 
                     size="sm"
                     className="w-full border-primary/30 hover:border-primary hover:bg-primary/10"
-                    onClick={() => handleNavClick('#contact')}
+                    asChild
                   >
-                    Let's Talk
+                    <a 
+                      href="https://drive.google.com/file/d/1UhXIr6Ejn2JJNbpHp4n4106p0SEQAr_U/view?usp=drive_link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Resume
+                    </a>
                   </Button>
                 </div>
               </div>
